@@ -1,6 +1,6 @@
 <?php
 
-namespace Abram\Odbc;
+namespace Phattarachai\ODBC;
 
 use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Query\Processors\Processor;

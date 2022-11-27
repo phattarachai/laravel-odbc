@@ -1,13 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Andrea
- * Date: 23/02/2018
- * Time: 17:51
- */
 
-namespace Abram\Odbc;
+namespace Phattarachai\ODBC;
 
+use PDO;
 use PDOStatement;
 
 class ODBCPdoStatement extends PDOStatement
@@ -56,7 +51,7 @@ class ODBCPdoStatement extends PDOStatement
         $this->params = [];
     }
 
-    public function fetchAll($how = NULL, $class_name = NULL, $ctor_args = NULL)
+    public function fetchAll(int $mode = PDO::FETCH_BOTH, ...$args)
     {
         $records = [];
         while ($record = $this->fetch()) {
@@ -64,6 +59,8 @@ class ODBCPdoStatement extends PDOStatement
         }
         return $records;
     }
+
+
 
     public function fetch($option = null, $ignore = null, $ignore2 = null)
     {

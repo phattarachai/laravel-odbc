@@ -1,12 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Andrea
- * Date: 20/02/2018
- * Time: 15:50
- */
 
-namespace Abram\Odbc;
+namespace Phattarachai\ODBC;
+
 
 use Illuminate\Database\Connectors\Connector;
 use Illuminate\Database\Connectors\ConnectorInterface;
@@ -21,6 +16,7 @@ class ODBCConnector extends Connector implements ConnectorInterface
      * @param array $config
      *
      * @return \PDO
+     * @throws \Exception
      * @internal param array $options
      *
      */
@@ -30,9 +26,7 @@ class ODBCConnector extends Connector implements ConnectorInterface
 
         $dsn = Arr::get($config, 'dsn');
 
-        $connection = $this->createConnection($dsn, $config, $options);
-
-        return $connection;
+        return $this->createConnection($dsn, $config, $options);
     }
 
     /**

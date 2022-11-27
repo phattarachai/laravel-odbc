@@ -2,8 +2,10 @@
 This integration allows the use of <b>odbc_*</b> php function with Laravel framework instead of PDO.<br>
 It emulates PDO class used by Laravel.
 
+This is a forge from `andreossido/laravel-odbc` to support latest PHP and Laravel versions. 
+
 ### # How to install
-> `composer require abram/laravel-odbc` To add source in your project
+> `composer require phattarachai/laravel-odbc` To add source in your project
 
 ### # Usage Instructions
 It's very simple to configure:
@@ -24,12 +26,12 @@ It's very simple to configure:
 ```PHP
 'providers' => [
   ...
-  Abram\Odbc\ODBCServiceProvider::class
+  Phattarachai\Odbc\ODBCServiceProvider::class
 ]
 ```
 
-### # Eloquen ORM
-You can use Laravel, Eloquent ORM and other Illuminate's components as usual.
+### # Eloquent ORM
+You can use Laravel, Eloquent ORM and other Illuminates components as usual.
 ```PHP
 # Facade
 $books = DB::connection('odbc-connection-name')->table('books')->where('Author', 'Abram Andrea')->get();
