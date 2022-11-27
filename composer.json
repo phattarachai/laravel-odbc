@@ -20,13 +20,13 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Phattarachai\\Odbc\\": "src"
+			"Phattarachai\\ODBC\\": "src"
 		}
 	},
 	"extra": {
 		"laravel": {
 			"providers": [
-				"Phattaarachai\\Odbc\\ODBCServiceProvider"
+				"Phattaarachai\\ODBC\\ODBCServiceProvider"
 			]
 		}
 	}
