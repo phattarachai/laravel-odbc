@@ -1,33 +1,33 @@
 {
-	"name": "phattarachai/laravel-odbc",
-	"description": "ODBC integration for Laravel framework ",
-	"type": "library",
-	"homepage": "https://github.com/phattarachai/laravel-odbc",
-	"authors": [
-		{
-			"name": "Phattarachai Chaimongkol",
-			"email": "phatchai28@gmail.com",
-			"homepage": "https://phattarachai.dev",
-			"role": "Developer"
-		}
-	],
-	"require": {
-		"php": "^8.0",
-		"illuminate/database": ">= 6.0",
-		"illuminate/support": ">= 6.0",
-		"ext-pdo": "*",
-		"ext-odbc": "*"
-	},
-	"autoload": {
-		"psr-4": {
-			"Phattarachai\\ODBC\\": "src"
-		}
-	},
-	"extra": {
-		"laravel": {
-			"providers": [
-				"Phattaarachai\\ODBC\\ODBCServiceProvider"
-			]
-		}
-	}
+  "name": "phattarachai/laravel-odbc",
+  "description": "ODBC integration for Laravel framework ",
+  "type": "library",
+  "homepage": "https://github.com/phattarachai/laravel-odbc",
+  "authors": [
+    {
+      "name": "Phattarachai Chaimongkol",
+      "email": "phatchai28@gmail.com",
+      "homepage": "https://phattarachai.dev",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "illuminate/database": "^v10.0.0",
+    "illuminate/support": "^v10.0.0",
+    "ext-pdo": "*",
+    "ext-odbc": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Phattarachai\\Odbc\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Phattaarachai\\Odbc\\ODBCServiceProvider"
+      ]
+    }
+  }
 }

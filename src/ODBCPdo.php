@@ -1,5 +1,6 @@
 <?php
-namespace Phattarachai\ODBC;
+
+namespace Phattarachai\Odbc;
 
 
 use Exception;

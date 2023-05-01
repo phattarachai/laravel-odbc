@@ -1,6 +1,6 @@
 <?php
 
-namespace Phattarachai\ODBC;
+namespace Phattarachai\Odbc;
 
 use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Query\Processors\Processor;
@@ -11,9 +11,9 @@ class ODBCProcessor extends Processor
      * Process an "insert get ID" query.
      *
      * @param Builder $query
-     * @param  string $sql
-     * @param  array $values
-     * @param  string $sequence
+     * @param string $sql
+     * @param array $values
+     * @param string $sequence
      * @return int
      */
     public function processInsertGetId(Builder $query, $sql, $values, $sequence = null)
@@ -30,7 +30,8 @@ class ODBCProcessor extends Processor
      * @param null $sequence
      * @return mixed
      */
-    public function getLastInsertId(Builder $query, $sequence = null){
+    public function getLastInsertId(Builder $query, $sequence = null)
+    {
         return $query->getConnection()->getPdo()->lastInsertId();
     }
 }

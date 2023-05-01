@@ -1,5 +1,6 @@
 <?php
-namespace Phattarachai\ODBC;
+
+namespace Phattarachai\Odbc;
 
 
 use Illuminate\Database\Query\Builder;
@@ -8,11 +9,12 @@ class ODBCBuilder extends Builder
 {
     private $model;
 
-    public function __construct($connection,
-                                $grammar = null,
-                                $processor = null,
-                                $model = null)
-    {
+    public function __construct(
+        $connection,
+        $grammar = null,
+        $processor = null,
+        $model = null
+    ) {
         $this->model = $model;
         return parent::__construct($connection, $grammar, $processor);
     }

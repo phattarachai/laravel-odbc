@@ -1,6 +1,6 @@
 <?php
 
-namespace Phattarachai\ODBC;
+namespace Phattarachai\Odbc;
 
 use PDO;
 use PDOStatement;
@@ -27,8 +27,9 @@ class ODBCPdoStatement extends PDOStatement
         $i = 0;
 
         while (isset($qryArray[$i])) {
-            if (preg_match("/^:/", $qryArray[$i]))
+            if (preg_match("/^:/", $qryArray[$i])) {
                 $params[$qryArray[$i]] = null;
+            }
             $i++;
         }
 
@@ -59,7 +60,6 @@ class ODBCPdoStatement extends PDOStatement
         }
         return $records;
     }
-
 
 
     public function fetch($option = null, $ignore = null, $ignore2 = null)

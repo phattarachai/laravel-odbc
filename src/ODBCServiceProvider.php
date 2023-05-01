@@ -1,6 +1,6 @@
 <?php
 
-namespace Phattarachai\ODBC;
+namespace Phattarachai\Odbc;
 
 
 use Illuminate\Database\DatabaseManager;

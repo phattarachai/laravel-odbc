@@ -1,6 +1,6 @@
 <?php
 
-namespace Phattarachai\ODBC;
+namespace Phattarachai\Odbc;
 
 
 use Illuminate\Database\Connectors\Connector;
@@ -32,10 +32,10 @@ class ODBCConnector extends Connector implements ConnectorInterface
     /**
      * Create a new PDO connection instance.
      *
-     * @param  string $dsn
-     * @param  string $username
-     * @param  string $password
-     * @param  array $options
+     * @param string $dsn
+     * @param string $username
+     * @param string $password
+     * @param array $options
      * @return ODBCPdo
      */
     protected function createPdoConnection($dsn, $username, $password, $options)
