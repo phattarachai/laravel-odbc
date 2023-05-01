@@ -3,6 +3,8 @@
 namespace Phattarachai\Odbc;
 
 use Illuminate\Database\Connection;
+use Illuminate\Database\Events\StatementPrepared;
+use PDOStatement;
 
 class ODBCConnection extends Connection
 {
@@ -31,5 +33,14 @@ class ODBCConnection extends Connection
             return new $processor;
         }
         return new ODBCProcessor;
+    }
+
+    protected function prepared(PDOStatement $statement)
+    {
+        // $statement->setFetchMode($this->fetchMode);
+
+        $this->event(new StatementPrepared($this, $statement));
+
+        return $statement;
     }
 }
